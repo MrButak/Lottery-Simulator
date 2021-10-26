@@ -26,18 +26,30 @@ function lotteryNumberGenerator() {
 
 }
 function checkWinner() {
-    let userNumbers0 = prompt("num 1");
-    if(userNumbers0 == regBallCheck[0] ||
-        userNumbers0 == regBallCheck[1] ||
-        userNumbers0 == regBallCheck[2] ||
-        userNumbers0 == regBallCheck[3] ||
-        userNumbers0 == regBallCheck[4]) {
-            console.log(regBallCheck)
-        } else {
-            console.log("nope")
+    
+    userNumbers = [];
+    for(x = 0; x < 5; x++) {
+        userNumbers[x] = prompt("num" + (x + 1));
+        if(userNumbers < 1 || userNumbers > 35) {
+            wrongInput();
+           
         }
+        if(userNumbers[x] == regBallCheck[0] ||
+            userNumbers[x] == regBallCheck[1] ||
+            userNumbers[x] == regBallCheck[2] ||
+            userNumbers[x] == regBallCheck[3] ||
+            userNumbers[x] == regBallCheck[4]) {
+                console.log("You Matched a Number!" + userNumbers[x])
+                
+            } else {
+                console.log("nope")
+            }
+    }
     
-    
+}
+function wrongInput() {
+    alert("only numbers 1 - 35");
+    checkWinner();
 }
 
 
