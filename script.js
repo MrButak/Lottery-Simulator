@@ -25,31 +25,35 @@ function lotteryNumberGenerator() {
     
 
 }
+
+function userChoice () {
+   
+   userNumbers = document.querySelectorAll(".userNumbers");
+    for(x = 0; x < 10; x++) {
+        userNumbers[x].classList.add("btn" + (x + 1)) //add unique class name to each individual buttons
+        userNumbers[x].addEventListener('click', () => {
+            console.log(x)
+        })
+    }
+}
+
+
 function checkWinner() {
     
-    userNumbers = [];
-    for(x = 0; x < 5; x++) {
-        userNumbers[x] = prompt("num" + (x + 1));
-        if(userNumbers < 1 || userNumbers > 35) {
-            wrongInput();
            
-        }
-        if(userNumbers[x] == regBallCheck[0] ||
-            userNumbers[x] == regBallCheck[1] ||
-            userNumbers[x] == regBallCheck[2] ||
-            userNumbers[x] == regBallCheck[3] ||
-            userNumbers[x] == regBallCheck[4]) {
-                console.log("You Matched a Number!" + userNumbers[x])
+       
+        // if(userNumbers[x] == regBallCheck[0] ||
+        //     userNumbers[x] == regBallCheck[1] ||
+        //     userNumbers[x] == regBallCheck[2] ||
+        //     userNumbers[x] == regBallCheck[3] ||
+        //     userNumbers[x] == regBallCheck[4]) {
+        //         console.log("You Matched a Number!" + userNumbers[x])
                 
-            } else {
-                console.log("nope")
-            }
-    }
+        //     } else {
+        //         console.log("nope")
+        //     }
     
-}
-function wrongInput() {
-    alert("only numbers 1 - 35");
-    checkWinner();
+    
 }
 
 
