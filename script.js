@@ -35,10 +35,11 @@ function userChoice () {
         button.addEventListener('click', () => {
             userDisplayNumbersArray.push(button.innerHTML)
             userNumbersDisplayWrapper.textContent = userDisplayNumbersArray.join("  --  ")
-            if(userDisplayNumbersArray.length >= 5) {
-                userDisplayNumbersArray.pop();
+            // if(userDisplayNumbersArray.length >= 5) {
+            //     userDisplayNumbersArray.length -= 1;
                 
-            } 
+                
+            // } 
         })
     })
     userDisplayPBNumbersArray = [];
@@ -60,7 +61,7 @@ function userChoice () {
     pBtn = document.querySelector(".pBtn");
     pBtn.addEventListener('click', () => {
         
-        if(userDisplayNumbersArray.length == 4 && userDisplayPBNumbersArray == 0) {
+        if(userDisplayNumbersArray.length == 5 && userDisplayPBNumbersArray.length == 1) {
             
             lotteryNumberGenerator()
         }
@@ -74,9 +75,7 @@ function clearButton() {
         userDisplayPBNumbersArray = [];
         userDisplayNumbersArray = [];
         userNumbersDisplayWrapper.textContent = "";
-        for(x = 0; x < 5; x++) {
-            regBall[x].textContent = "";
-        }
+        
     })
 }
 

@@ -5,7 +5,7 @@
     align-items: center;
     width: 100%;
     height: auto;
-    border: 2px solid black;
+    
     gap: 30px;
     
 }
@@ -16,7 +16,7 @@
     align-items: center;
     width: 100%;
     height: auto;
-    border: 2px solid black;
+   
 }
 .displayWrap {
     display: flex;
