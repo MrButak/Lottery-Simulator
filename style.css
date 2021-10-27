@@ -1,4 +1,4 @@
-.buttonDisplayWrapper {
+.ballDisplayWrapper {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
@@ -7,6 +7,52 @@
     height: auto;
     border: 2px solid black;
     gap: 30px;
+    
+}
+.userNumbersContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border: 2px solid black;
+}
+.displayWrap {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    
+    margin-top: 30px;
+    font-size: 40px;
+    gap: 10px;
+}
+.userNumbersDisplayWrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 420px;
+    height: 50px;
+   
+    
+    font-size: 40px;
+    gap: 40px;
+}
+.userNumbersPBDisplayWrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 50px;
+   
+    
+    font-size: 40px;
+    gap: 40px;
 }
 .regBall {
     display: flex;
@@ -18,6 +64,7 @@
     border: 2px solid black;
     border-radius: 50%;
     font-weight: 800;
+    
 }
 .pBall {
     display: flex;
@@ -33,19 +80,45 @@
 }
 .userNumbersWrapper {
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 500px;
-    border: 2px solid black;
+    width: 340px;
+    height: 480px;
+    
+    margin-top: 28px;
 }
+ .userPowerBallNumbersWrapper {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: flex-start;
+    align-items: center;
+    width: 140px;
+    height: 480px;
+    
+    margin-top: 50px;
+ }   
+    
+    
+    
+
 .userNumbers {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 50px;
-    height: 50px;
+    width: 65px;
+    height: 65px; 
 
+}
+.userPowerBallNumbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 65px;
+    height: 65px;
+    background-color: red;
 }
