@@ -64,16 +64,16 @@ function determinePlay() {
 }
 
 function determineWinner() {
-    
+        stats = document.querySelector(".stats");
         userNumbersArray = userNumbersArray.map(Number)
         matchingNumbers = userNumbersArray.filter(function(val) {
             return winningNumbersArray.indexOf(val) != -1;
         })
 
-        if(matchingNumbers.length > 0) {console.log(`You've got a match! ${matchingNumbers}`)}
-        if(userPBNumberArray[0] == winningPBNumbersArray[0]) {console.log(`You matched the PowerBall! ${winningPBNumbersArray[0]}`)}
+        if(matchingNumbers.length > 0) {stats.textContent = (`You've got a match! ${matchingNumbers}`)}
+        if(userPBNumberArray[0] == winningPBNumbersArray[0]) {stats.textContent = (`You matched the PowerBall! ${winningPBNumbersArray[0]}`)}
         //see how long it takes to match x ammount of numbers
-        // while(matchingNumbers.length < 4) {
+        //while(matchingNumbers.length < 4) {
         //     counter++;
         //     play()
             
