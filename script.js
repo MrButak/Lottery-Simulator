@@ -1,3 +1,7 @@
+//todo:
+//1. check winningNumberArray and userNumbersArray for duplicates (not matter what index in array)
+//2. give functionality to "clear" button
+//3. make is so user can't enter more than 5 numbers and 1 pb number
 function play() {
 
     let winningNumbers = document.querySelectorAll(".winningNumbers");
@@ -60,9 +64,12 @@ function determinePlay() {
 }
 
 function determineWinner() {
-    for(x = 0; x < 5; x++) {
-        if(userNumbersArray[x] == winningNumbersArray[x]) {console.log(`You matched ${winningNumbersArray[x]}`)}
+    
+    for(x = 0; x < 25; x++) {
+
     }
+    
+    
     if(userPBNumberArray[0] == winningPBNumbersArray[0]) {console.log(`You matched the PowerBall! ${winningPBNumbersArray[0]}`)}
     // console.table({userNumbersArray});
     // console.log({userPBNumberArray});
