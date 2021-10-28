@@ -20,6 +20,8 @@ body {
     border-radius: 50%;
     background-color: seashell;
     text-align: center;
+    font-size: 26px;
+    font-weight: 800;
 }
 .winningPBNumber {
     display: flex;
@@ -31,6 +33,8 @@ body {
     border-radius: 50%;
     background-color: red;
     text-align: center;
+    font-size: 26px;
+    font-weight: 800;
 }
 .userNumbersContainer {
     display: flex;
@@ -42,15 +46,23 @@ body {
 }
 .userNumbers {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 400px;
     height: 60px;
     border: 1px solid black;
+    font-weight: 800;
+    font-size: 26px;
 }
-.userPBNumbers {
+.userPBNumber {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 160px;
     height: 60px;
     border: 1px solid black;
+    font-weight: 800;
+    font-size: 26px;
 }
 .numberButtonsContainer {
     display: flex;
