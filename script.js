@@ -1,4 +1,3 @@
-
 function play() {
 
     let winningNumbers = document.querySelectorAll(".winningNumbers");
@@ -21,6 +20,7 @@ function play() {
         winningPBNumber.textContent = (ranPBNum);
         winningPBNumbersArray.push(ranPBNum);
     }
+    determineWinner();
 }
 
 function pickNumbers() {
@@ -46,14 +46,27 @@ function pickNumbers() {
             userPBNumber.textContent = userPBNumberArray.join("")
         })
     });
+    
 }
 
 function determinePlay() {
+
     playButton = document.querySelector(".playButton");
-    if(userNumbersArray.length == 5 && userPBNumberArray.length == 1) {
-        playButton.addEventListener('click', () => {
-            play();
-        })
-    }
+ 
+    playButton.addEventListener('click', () => {
+        if(userNumbersArray.length == 5 && userPBNumberArray.length == 1) {play()}
+        
+    })
 }
 
+function determineWinner() {
+    for(x = 0; x < 5; x++) {
+        if(userNumbersArray[x] == winningNumbersArray[x]) {console.log(`You matched ${winningNumbersArray[x]}`)}
+    }
+    if(userPBNumberArray[0] == winningPBNumbersArray[0]) {console.log(`You matched the PowerBall! ${winningPBNumbersArray[0]}`)}
+    // console.table({userNumbersArray});
+    // console.log({userPBNumberArray});
+    // console.table({winningNumbersArray});
+    // console.log({winningPBNumbersArray});
+
+}
