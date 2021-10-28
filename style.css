@@ -1,124 +1,109 @@
-.ballDisplayWrapper {
+body {
+    height: 100%vh;
+}
+.winningNumbersContainer {
     display: flex;
-    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 100px;
     
-    gap: 30px;
-    
+    gap: 20px;
+}
+.winningNumbers {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    border: 3px solid black;
+    border-radius: 50%;
+    background-color: seashell;
+}
+.winningPBNumber {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    border: 3px solid black;
+    border-radius: 50%;
+    background-color: red;
 }
 .userNumbersContainer {
     display: flex;
-    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
-   
-}
-.displayWrap {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    
-    margin-top: 30px;
-    font-size: 40px;
+    height: 80px;
     gap: 10px;
 }
-.userNumbersDisplayWrapper {
+.userNumbers {
     display: flex;
-    flex-wrap: nowrap;
+    width: 400px;
+    height: 60px;
+    border: 1px solid black;
+}
+.userPBNumbers {
+    display: flex;
+    width: 160px;
+    height: 60px;
+    border: 1px solid black;
+}
+.numberButtonsContainer {
+    display: flex;
     justify-content: center;
-    align-items: center;
-    width: 420px;
-    height: 50px;
+    width: 100%;
+    height: 300px;
    
-    
-    font-size: 40px;
-    gap: 40px;
+    margin-top: 20px;
+    gap: 30px;
 }
-.userNumbersPBDisplayWrapper {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 50px;
-   
-    
-    font-size: 40px;
-    gap: 40px;
-}
-.regBall {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 50px;
-    height: 50px;
-    border: 2px solid black;
-    border-radius: 50%;
-    font-weight: 800;
-    
-}
-.pBall {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 50px;
-    height: 50px;
-    color: red;
-    border: 2px solid black;
-    border-radius: 50%;
-    font-weight: 800;
-}
-.userNumbersWrapper {
+.buttonsContainer {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    width: 420px;
+    height: 300px;
+   
+}
+.numberButton {
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 340px;
-    height: 480px;
+    text-align: center;
+    width: 58px;
+    height: 58px;
+    border: 1px solid black;
     
-    margin-top: 28px;
 }
- .userPowerBallNumbersWrapper {
+.pBButtonsContainer {
     display: flex;
     flex-direction: column;
+    width: 65x;
+    height: 300px;
     
-    justify-content: flex-start;
-    align-items: center;
-    width: 140px;
-    height: 480px;
-    
-    margin-top: 50px;
- }   
-    
-    
-    
-
-.userNumbers {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 65px;
-    height: 65px; 
-
 }
-.userPowerBallNumbers {
+.pBButton {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 65px;
-    height: 65px;
+    width: 58px;
+    height: 58px;
+    border: 1px solid black;
     background-color: red;
+}
+.gameButtonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 65x;
+    height: 300px;
+   
+}
+.gameButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 58px;
+    height: 58px;
+    border: 1px solid black;
 }
