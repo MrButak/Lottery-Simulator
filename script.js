@@ -1,5 +1,5 @@
 //todo:
-
+let counter = 0;
 //2. give functionality to "clear" button
 //3. make is so user can't enter more than 5 numbers and 1 pb number
 function play() {
@@ -64,15 +64,20 @@ function determinePlay() {
 }
 
 function determineWinner() {
-
-    userNumbersArray = userNumbersArray.map(Number)
-    matchingNumbers = userNumbersArray.filter(function(val) {
-        return winningNumbersArray.indexOf(val) != -1;
-    })
-
-    if(matchingNumbers.length > 0) {console.log(`You've got a match! ${matchingNumbers}`)}
-    if(userPBNumberArray[0] == winningPBNumbersArray[0]) {console.log(`You matched the PowerBall! ${winningPBNumbersArray[0]}`)}
     
+        userNumbersArray = userNumbersArray.map(Number)
+        matchingNumbers = userNumbersArray.filter(function(val) {
+            return winningNumbersArray.indexOf(val) != -1;
+        })
+
+        if(matchingNumbers.length > 0) {console.log(`You've got a match! ${matchingNumbers}`)}
+        if(userPBNumberArray[0] == winningPBNumbersArray[0]) {console.log(`You matched the PowerBall! ${winningPBNumbersArray[0]}`)}
+        //see how long it takes to match x ammount of numbers
+        // while(matchingNumbers.length < 4) {
+        //     counter++;
+        //     play()
+            
+        // }
 
 
     // console.table({userNumbersArray});
