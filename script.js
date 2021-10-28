@@ -64,16 +64,26 @@ function determinePlay() {
 }
 
 function determineWinner() {
-    
-    for(x = 0; x < 25; x++) {
+    userNumbersArray = userNumbersArray.map(Number)
+    matchingNumbers = userNumbersArray.filter(function(val) {
+        return winningNumbersArray.indexOf(val) != -1;
+    })
 
-    }
-    
-    
+    if(matchingNumbers.length > 0) {console.log(`You've got a match! ${matchingNumbers}`)}
     if(userPBNumberArray[0] == winningPBNumbersArray[0]) {console.log(`You matched the PowerBall! ${winningPBNumbersArray[0]}`)}
+    
     // console.table({userNumbersArray});
     // console.log({userPBNumberArray});
     // console.table({winningNumbersArray});
     // console.log({winningPBNumbersArray});
 
 }
+
+// var array1 = ['19', '3', '3', '4', '5'];
+// var array2 = [3, 4, 19];
+
+// var duplicates = array1.filter(function(val) {
+//   return array2.indexOf(val) != -1;
+// });
+
+// console.log(duplicates);
