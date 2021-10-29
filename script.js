@@ -1,9 +1,8 @@
-
 //todo:
+//1. make is so user can't enter more than 5 numbers and 1 pb number
+//2. fix duplicates bug in determineWinner() function
+
 let counter = 0;
-//2. give functionality to "clear" button
-//3. make is so user can't enter more than 5 numbers and 1 pb number
-//4. fix duplicates bug in determineWinner() function
 function play() {
 
     let winningNumbers = document.querySelectorAll(".winningNumbers");
@@ -38,18 +37,26 @@ function pickNumbers() {
 
     userNumbersArray = [];
     userPBNumberArray = [];
-
+    
     numberButtons.forEach((button) => {
+        
         button.addEventListener('click', () => {
             userNumbersArray.push(button.innerHTML);
             userNumbers.textContent = userNumbersArray.join(" - ")
+            //prevent user from entering more than 5 numbers
+            
+             
         })
+        
     });
+    
 
     pBButton.forEach((button) => {
         button.addEventListener('click', () => {
             userPBNumberArray.push(button.innerHTML);
             userPBNumber.textContent = userPBNumberArray.join("")
+            //prevent user from entering more than 1 number
+            
         })
     });
     
@@ -68,6 +75,9 @@ function determinePlay() {
 
 
 function determineWinner() {
+    // This is counting duplicates in the userNumberArray.
+    // example :  userNumbersArray [3, 3, 3, 14, 7] and winningNumbersArray [3, 23, 22, 19, 7]
+    // so that counts 3 matches.
         stats = document.querySelector(".stats");
         userNumbersArray = userNumbersArray.map(Number)
         matchingNumbers = userNumbersArray.filter(function(val) {
