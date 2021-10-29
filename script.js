@@ -1,7 +1,9 @@
+
 //todo:
 let counter = 0;
 //2. give functionality to "clear" button
 //3. make is so user can't enter more than 5 numbers and 1 pb number
+//4. fix duplicates bug in determineWinner() function
 function play() {
 
     let winningNumbers = document.querySelectorAll(".winningNumbers");
@@ -12,13 +14,13 @@ function play() {
 
     let ranNum;
     let ranPBNum;
-
+    //produces 5 random numbers 1 - 35
     for(x = 0; x < 5; x++) {
         ranNum = Math.floor(Math.random() * (36 - 1) + 1);
         winningNumbers[x].textContent = (ranNum);
         winningNumbersArray.push(ranNum);  
     }
-
+    //produces 1 random number 1 - 5
     for(x = 0; x < 1; x++) {
         ranPBNum = Math.floor(Math.random() * (6 - 1) + 1);
         winningPBNumber.textContent = (ranPBNum);
@@ -32,7 +34,7 @@ function pickNumbers() {
     let numberButtons = document.querySelectorAll(".numberButton");
     let userNumbers = document.querySelector(".userNumbers");
     let pBButton = document.querySelectorAll(".pBButton");
-    let userPBNumber = document.querySelector(".userPBNumber")
+    let userPBNumber = document.querySelector(".userPBNumber");
 
     userNumbersArray = [];
     userPBNumberArray = [];
@@ -63,6 +65,8 @@ function determinePlay() {
     })
 }
 
+
+
 function determineWinner() {
         stats = document.querySelector(".stats");
         userNumbersArray = userNumbersArray.map(Number)
@@ -72,18 +76,42 @@ function determineWinner() {
 
         if(matchingNumbers.length > 0) {stats.textContent = (`You've got a match! ${matchingNumbers}`)}
         if(userPBNumberArray[0] == winningPBNumbersArray[0]) {stats.textContent = (`You matched the PowerBall! ${winningPBNumbersArray[0]}`)}
-        //see how long it takes to match x ammount of numbers
-        //while(matchingNumbers.length < 4) {
-        //     counter++;
-        //     play()
-            
-        // }
-
-
-    // console.table({userNumbersArray});
-    // console.log({userPBNumberArray});
-    // console.table({winningNumbersArray});
-    // console.log({winningPBNumbersArray});
+     
 
 }
 
+function additionalButtons() {
+    // clear button
+    userNumbers = document.querySelector(".userNumbers");
+    userPBNumber = document.querySelector(".userPBNumber");
+
+    clearButton = document.querySelector(".clearButton");
+    clearButton.addEventListener('click', () => {
+        userNumbers.textContent = "";
+        userPBNumber.textContent = "";
+        userNumbersArray = [];
+        userPBNumberArray = [];
+    });
+    //reset button
+    winningNumbers = document.querySelectorAll(".winningNumbers");
+    winningPBNumber = document.querySelector(".winningPBNumber");
+    resetButton = document.querySelector(".resetButton");
+
+
+    resetButton.addEventListener('click', () => {
+        if(winningNumbers[0].textContent != "?") {
+            userNumbers.textContent = "";
+            userPBNumber.textContent = "";
+            winningNumbers.textContent
+            userNumbersArray = [];
+            userPBNumberArray = [];
+            winningPBNumber.textContent = "?"
+            for(x = 0; x < 5; x++) {
+                winningNumbers[x].textContent = "?";
+            }
+            winningNumbersArray = [];
+            winningPBNumbersArray = [];
+        }
+    })
+
+}
